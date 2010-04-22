@@ -1,0 +1,34 @@
+* Git!
+* Github!
+* JSON-Services
+* Testdaten
+* Tests, am besten gleich BDD!
+** Shoulda
+** Factory Girl
+* korrekte Fehlerseiten für HTML
+** korrektes Fehlerhandling für JSON
+* Suche
+
+
+Später:
+* Caching
+* Richtiges Logo, Favicon, ...
+################################################################################
+
+
+Anregungen für Sven
+* Bookmarklet
+* Tagwolken
+* Seite mit allen Links (paginiert), Suche
+* Bookmarklet
+* Suche anhand von Tags, Tagwolke, ... (Startseite)
+* Favoriten (Startseite, Gruppen als Tabs etc.)
+
+
+################################################################################
+
+Fakten
+* Rails 2.3.5
+* Minimale Anwendung, unnötige Sachen ausgedünnt
+* Alle Bots per robots.txt ausgesperrt
+* sqlite, weil einfach einfach einfach ist
