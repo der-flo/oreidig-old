@@ -5,10 +5,7 @@ Rails::Initializer.run do |config|
   config.frameworks -= [ :active_resource, :action_mailer ]
   config.time_zone = 'UTC'
 
-  ##############################################################################
-  # TODO: Stuff not yet needed
-  # config.load_paths += %W( #{RAILS_ROOT}/extras )
-  # config.active_record.observers = :cacher, :garbage_collector,
-  #                                  :forum_observer
-  # config.i18n.default_locale = :de
+  config.gem 'shoulda', :version => '2.10.3'
+  config.gem 'factory_girl', :version => '1.2.4'
+  config.gem 'faker', :version => '0.3.1'
 end

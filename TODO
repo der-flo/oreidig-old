@@ -1,20 +1,32 @@
-* Git!
-* Github!
-* JSON-Services
-* Testdaten
-* Tests, am besten gleich BDD!
-** Shoulda
-** Factory Girl
-* korrekte Fehlerseiten für HTML
+* Services
+** Welche im Detail?
+** Suche? Wie?
 ** korrektes Fehlerhandling für JSON
+* korrekte Fehlerseiten für HTML
 * Suche
-
+* Github
+* Tests
 
 Später:
-* Caching
+* Geschwindigkeitsoptimierungen
+** Caching
+*** Memcached
+*** "Modified Since"
+*** ETags
+** Weitere Indices?
 * Richtiges Logo, Favicon, ...
-################################################################################
+* Favicons oder Screenshots zu den Links dazu
+* Mimetype für Link? (PDF, ...)
+* Private Links?
+* "Tag Suggestions" von del.icio.us
+* Bundles, ...?
 
+################################################################################
+Kurze Noitzen
+* Shoulda-Macros verwenden, um z.B. Validierungen zu vereinfachen
+
+
+################################################################################
 
 Anregungen für Sven
 * Bookmarklet
@@ -24,11 +36,12 @@ Anregungen für Sven
 * Suche anhand von Tags, Tagwolke, ... (Startseite)
 * Favoriten (Startseite, Gruppen als Tabs etc.)
 
-
 ################################################################################
 
 Fakten
-* Rails 2.3.5
-* Minimale Anwendung, unnötige Sachen ausgedünnt
-* Alle Bots per robots.txt ausgesperrt
-* sqlite, weil einfach einfach einfach ist
+* Service
+** Rails 2.3.5
+** Minimale Anwendung, unnötige Sachen ausgedünnt
+** Alle Bots per robots.txt ausgesperrt
+** SQLite3, weil einfach einfach einfach ist
+* Git
