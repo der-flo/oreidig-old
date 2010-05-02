@@ -4,7 +4,7 @@ config.action_controller.perform_caching = true
 config.action_view.cache_template_loading = true
 
 ################################################################################
-# TODO: Perhaps needed later
+# TODO: Perhaps later needed
 
 # config.log_level = :debug
 # config.logger = SyslogLogger.new

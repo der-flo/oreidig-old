@@ -13,6 +13,6 @@ class TagsController < ServiceController
 
   private
   def load_tag
-    @tag = Tag.find_by_name!(params[:id])
+    @tag = Tag.find(params[:id])
   end
 end

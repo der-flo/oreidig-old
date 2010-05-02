@@ -7,10 +7,10 @@ class TagTest < ActiveSupport::TestCase
     setup do
       @tag = Tag.new
     end
-    should 'have a maximum name length of 100 characters' do
-      @tag.name = 'x' * 100
+    should 'have a maximum name length of 250 characters' do
+      @tag.name = 'x' * 250
       assert_valid @tag
-      @tag.name = 'x' * 101
+      @tag.name = 'x' * 251
       assert !@tag.valid?
     end
     should 'not allow an empty name' do
@@ -18,10 +18,6 @@ class TagTest < ActiveSupport::TestCase
       assert !@tag.valid?
       @tag.name = nil
       assert !@tag.valid?
-    end
-    should 'use its name as URL parameter' do
-      tag = Factory(:link).tags.first
-      assert_equal tag.to_param, tag.name
     end
   end
 end

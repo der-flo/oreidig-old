@@ -1,18 +1,17 @@
-# TODOs:
-
 * Services
 ** Welche im Detail?
 ** Suche? Wie?
 ** korrektes Fehlerhandling für JSON
 * korrekte Fehlerseiten für HTML
+* Suche
 * Github
-* Mehr Tests
+* Tests
 
 Später:
 * Geschwindigkeitsoptimierungen
 ** Caching
 *** Memcached
-*** If-Modified-Since
+*** "Modified Since"
 *** ETags
 ** Weitere Indices?
 * Richtiges Logo, Favicon, ...
@@ -23,7 +22,7 @@ Später:
 * Bundles, ...?
 
 ################################################################################
-Kurze Notizen
+Kurze Noitzen
 * Shoulda-Macros verwenden, um z.B. Validierungen zu vereinfachen
 
 
@@ -46,32 +45,3 @@ Fakten
 ** Alle Bots per robots.txt ausgesperrt
 ** SQLite3, weil einfach einfach einfach ist
 * Git
-
-
-
-
-
-
-################################################################################
-Von Sven
-
-Oreidig
-* Tag
-** all - 2 levels (like delicious plugin)
-* User?
-* search -> unique interface to
-** tags
-** link
-*** desc
-*** url
-** unique interface
-
-################################################################################
-Erledigte Services:
-* Link
-** url
-** desc
-** tags as array
-* Tag
-** all
-
