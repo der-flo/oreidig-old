@@ -5,11 +5,14 @@ class Tag < ActiveRecord::Base
   has_and_belongs_to_many :links
   
   def to_json options = {}
-    # TODO: Add "tag" node?
-    {
-      :id => id,
-      :name => name,
-      :usage_count => links.count
+    { :tag =>{
+        :name => name,
+        :usage_count => links.count
+      }
     }.to_json(options)
+  end
+  
+  def to_param
+    name
   end
 end
