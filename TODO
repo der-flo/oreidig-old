@@ -1,8 +1,4 @@
-# TODOs:
-
 * Services
-** Welche im Detail?
-** Suche? Wie?
 ** korrektes Fehlerhandling für JSON
 * korrekte Fehlerseiten für HTML
 * Github
@@ -50,8 +46,6 @@ Fakten
 
 
 
-
-
 ################################################################################
 Von Sven
 
@@ -59,12 +53,6 @@ Oreidig
 * Tag
 ** all - 2 levels (like delicious plugin)
 * User?
-* search -> unique interface to
-** tags
-** link
-*** desc
-*** url
-** unique interface
 
 ################################################################################
 Erledigte Services:
@@ -74,4 +62,9 @@ Erledigte Services:
 ** tags as array
 * Tag
 ** all
-
+* search -> unique interface to
+** link
+*** desc
+*** url
+** unique interface
+** tags

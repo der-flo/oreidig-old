@@ -39,4 +39,9 @@ class Link < ActiveRecord::Base
       }
     }.to_json(options)
   end
+  
+  def self.search query
+    c = ['title LIKE ? OR url LIKE ? OR notes LIKE ?'] + ["%#{query}%"] * 3
+    find :all, :conditions => c
+  end
 end

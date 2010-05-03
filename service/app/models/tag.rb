@@ -7,12 +7,20 @@ class Tag < ActiveRecord::Base
   def to_json options = {}
     { :tag =>{
         :name => name,
-        :usage_count => links.count
+        :usage_count => usage_count
       }
     }.to_json(options)
   end
   
+  def usage_count
+    links.count
+  end
+  
   def to_param
     name
+  end
+
+  def self.search query
+    find :all, :conditions => ['name LIKE ?', "%#{query}%"]
   end
 end
