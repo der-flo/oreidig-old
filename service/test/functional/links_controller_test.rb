@@ -71,9 +71,10 @@ class LinksControllerTest < ActionController::TestCase
     end
   end
   
+  # TODO: Stubbing:
+  #       http://dev.thoughtbot.com/shoulda/classes/Shoulda/ClassMethods.html
+  #       example at #before_should
   # TODO: Stub like this? http://railsforum.com/viewtopic.php?id=37787
 end
-
-# TODO: http://stackoverflow.com/questions/2697365/when-does-factory-girl-create-objects-in-db
 
 # http://guides.rubyonrails.org/testing.html
