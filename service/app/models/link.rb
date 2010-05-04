@@ -1,7 +1,7 @@
 class Link < ActiveRecord::Base
   validates_length_of :url, :within => 1..500
   validates_uniqueness_of :url
-  validates_format_of :url, :with => URI::regexp(%w(http https))
+  validates_format_of :url, :with => URI::regexp(%w(http https file ftp))
   validates_length_of :title, :maximum => 250, :allow_nil => true
   validates_length_of :notes, :maximum => 5000, :allow_nil => true
   

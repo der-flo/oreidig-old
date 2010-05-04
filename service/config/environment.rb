@@ -8,4 +8,5 @@ Rails::Initializer.run do |config|
   config.gem 'shoulda', :version => '2.10.3'
   config.gem 'factory_girl', :version => '1.2.4'
   config.gem 'faker', :version => '0.3.1'
+  config.gem 'crack'
 end
