@@ -41,6 +41,20 @@ class LinksControllerTest < ActionController::TestCase
       end
     end
   end
+  context 'on JSON-GET to :index with filter' do
+    setup do
+      Factory(:link)
+      Factory(:link, :url => 'http://www.test444.de', :tag_list => 'testtag')
+      Factory(:link, :url => 'http://www.test555.de', :tag_list => 'testtag')
+      get :index, :format => :json, :tags => 'testtag'
+    end
+    should_respond_with :success
+    should 'return filtered links' do
+      json = JSON.parse(@response.body)
+      assert_equal json.length, 2
+    end
+    
+  end
   
   context 'on JSON-GET to :show' do
     setup do

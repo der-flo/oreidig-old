@@ -23,4 +23,21 @@ class Tag < ActiveRecord::Base
   def self.search query
     find :all, :conditions => ['name LIKE ?', "%#{query}%"]
   end
+  
+  def associated
+    tagz = Hash.new(0)
+    links.each do |link|
+      link.tags.each do |tag|
+        tagz[tag] += 1
+      end
+    end
+    tagz.delete(self)
+    tagz
+  end
+  
+  def associated_as_json
+    associated.collect do |tag, count|
+      { :tag => { :name => tag.name, :usage_count => count } }
+    end
+  end
 end

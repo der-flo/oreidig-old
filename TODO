@@ -4,13 +4,15 @@
 * Github
 * Mehr Tests
 
-Später:
 * Geschwindigkeitsoptimierungen
 ** Caching
 *** Memcached
 *** If-Modified-Since
 *** ETags
 ** Weitere Indices?
+
+
+Später:
 * Richtiges Logo, Favicon, ...
 * Favicons oder Screenshots zu den Links dazu
 * Mimetype für Link? (PDF, ...)
@@ -47,14 +49,9 @@ Fakten
 
 
 ################################################################################
-Von Sven
-
-Oreidig
-* Tag
-** all - 2 levels (like delicious plugin)
+Von Sven vorgeschlagene Services
 * User?
 
-################################################################################
 Erledigte Services:
 * Link
 ** url
@@ -62,6 +59,7 @@ Erledigte Services:
 ** tags as array
 * Tag
 ** all
+** all - 2 levels (like delicious plugin)
 * search -> unique interface to
 ** link
 *** desc

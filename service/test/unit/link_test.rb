@@ -14,11 +14,12 @@ class LinkTest < ActiveSupport::TestCase
                        :title => 'Test.de')
     end
 
-    [ 'ftp://www.test.de', 'bla://www.test.de'
+    [ 'oreidig://www.test.de', 'bla://www.test.de'
     ].each do |str|
       should_not_allow_values_for :url, str
     end
-    [ 'http://www.test.de', 'https://www.test.de', 'www.test125.de', 'bla'
+    [ 'http://www.test.de', 'https://www.test.de', 'www.test125.de', 'bla',
+      'ftp://www.test.de'
     ].each do |str|
       should_allow_values_for :url, str
     end

@@ -1,7 +1,13 @@
 class LinksController < ServiceController
   before_filter :load_link, :only => [:show, :update, :destroy]
   def index
-    @links = Link.all
+    tags = (params[:tags] || '').split(',')
+    @links = if tags.empty?
+      Link.all
+    else
+      tags = tags.map {|tag| tag.strip }
+      Link.find_all_by_tags tags
+    end
     render :json => @links.to_json
   end
   def show

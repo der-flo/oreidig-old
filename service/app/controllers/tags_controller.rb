@@ -1,5 +1,6 @@
 class TagsController < ServiceController
-  before_filter :load_tag, :only => :show
+  before_filter :load_tag, :only => [:show, :update]
+  skip_before_filter :verify_authenticity_token
   
   def index
     @tags = Tag.all
@@ -7,6 +8,14 @@ class TagsController < ServiceController
   end
   def show
     render :json => @tag
+  end
+
+  def update
+    if @tag.update_attributes params[:tag]
+      head :ok
+    else
+      render :json => @tag.errors, :status => :unprocessable_entity
+    end
   end
 
   # TODO: Other ops

@@ -62,5 +62,21 @@ class TagsControllerTest < ActionController::TestCase
         end
       end
     end
+    
+    context 'on PUT' do
+      # TODO: More tests!
+      should 'update tag' do
+        @tag = Factory(:tag)
+        params = {
+          :format => :json,
+          :id => @tag.name,
+          :tag => {
+            :name => '12345'
+          }
+        }
+        put :update, params
+        assert_equal Tag.find_by_name!('12345').id, @tag.id
+      end
+    end
   end
 end
