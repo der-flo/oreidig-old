@@ -60,9 +60,8 @@ class Link < ActiveRecord::Base
   end
   
   def self.find_all_by_tags tagz
-    
     if tagz.length == 1
-      Tag.find_by_name!(tagz.first).links
+      Tag.find_by_name!(tagz.first, :include => { :links => :tags }).links
     else
       tag_idz = tagz.collect do |tag|
         begin
@@ -80,7 +79,7 @@ class Link < ActiveRecord::Base
         HAVING COUNT(*) = #{tag_idz.length}
       }
       link_ids = connection.execute(sql).collect { |line| line[0] }
-      find(link_ids)
+      find(link_ids, :include => :tags)
     end
   end
 end

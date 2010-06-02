@@ -1,18 +1,15 @@
 * Services
-** korrektes Fehlerhandling für JSON
-* korrekte Fehlerseiten für HTML
-* Github
-* Mehr Tests
-
+** JSON: name-Attribute umbenennen (im JS-Objekt problematisch)
 * Geschwindigkeitsoptimierungen
 ** Caching
 *** Memcached
 *** If-Modified-Since
 *** ETags
 ** Weitere Indices?
-
+* Mehr Tests
 
 Später:
+* Fehlerseiten
 * Richtiges Logo, Favicon, ...
 * Favicons oder Screenshots zu den Links dazu
 * Mimetype für Link? (PDF, ...)
@@ -34,16 +31,6 @@ Anregungen für Sven
 * Bookmarklet
 * Suche anhand von Tags, Tagwolke, ... (Startseite)
 * Favoriten (Startseite, Gruppen als Tabs etc.)
-
-################################################################################
-
-Fakten
-* Service
-** Rails 2.3.5
-** Minimale Anwendung, unnötige Sachen ausgedünnt
-** Alle Bots per robots.txt ausgesperrt
-** SQLite3, weil einfach einfach einfach ist
-* Git
 
 
 

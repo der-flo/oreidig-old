@@ -26,7 +26,7 @@ class Tag < ActiveRecord::Base
   
   def associated
     tagz = Hash.new(0)
-    links.each do |link|
+    links.find(:all, :include => :tags).each do |link|
       link.tags.each do |tag|
         tagz[tag] += 1
       end
